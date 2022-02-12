@@ -2,10 +2,15 @@
   "name": "vue-pro-template",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "env NODE_ENV=staging vite --mode staging",
     "dev:staging": "env NODE_ENV=staging vite --mode staging",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "dev:production": "env NODE_ENV=production vite --mode production",
+    "build": "vue-tsc --noEmit && env NODE_ENV=production vite build --mode production",
+    "build:staging": "vue-tsc --noEmit && env NODE_ENV=staging vite build --mode staging",
+    "build:production": "vue-tsc --noEmit && env NODE_ENV=production vite build --mode production",
+    "preview": "vite preview",
+    "audit:staging": "yarn audit",
+    "audit:production": "yarn audit --groups dependencies"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
