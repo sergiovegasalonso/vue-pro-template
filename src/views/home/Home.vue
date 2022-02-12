@@ -5,7 +5,7 @@ const store = useStore();
 </script>
 
 <template>
-  <HelloWorld />
+  <HelloWorld msg="MESSAGE" />
   HOME {{ store.doubleCount }}
   <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </template>
