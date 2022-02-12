@@ -3,12 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:staging": "env NODE_ENV=staging vite --mode staging",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "pinia": "^2.0.10",
     "vue": "^3.2.25",
+    "vue-i18n": "^9.1.9",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
