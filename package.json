@@ -1,6 +1,7 @@
 {
   "name": "vue-pro-template",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "env NODE_ENV=staging vite --mode staging",
     "dev:staging": "env NODE_ENV=staging vite --mode staging",
@@ -9,6 +10,9 @@
     "build:staging": "vue-tsc --noEmit && env NODE_ENV=staging vite build --mode staging",
     "build:production": "vue-tsc --noEmit && env NODE_ENV=production vite build --mode production",
     "preview": "vite preview",
+    "test": "vitest",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "audit:staging": "yarn audit",
     "audit:production": "yarn audit --groups dependencies"
   },
